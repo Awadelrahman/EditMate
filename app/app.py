@@ -17,7 +17,7 @@ with txt_col:
 
 correct_me_button = st.button('Correct Me' )
 
-if correct_me_button:
+if correct_me_button and txt:
     response=utils.get_response(txt)
 
     with corrected_txt_col:
@@ -25,5 +25,10 @@ if correct_me_button:
                     "Corrected Text ✔️",
                     response, height=300
                     )
+if not txt:
 
-
+    with corrected_txt_col:
+        txt = st.text_area(
+                    "Corrected Text ❗",
+                    "No Text Found, Enter your text ❗", height=300
+                    )

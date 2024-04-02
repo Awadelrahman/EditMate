@@ -2,10 +2,7 @@ import streamlit as st
 from openai import OpenAI
 
 def get_response(txt):
-    prompt= """You are my writing assistant, 
-            correct the grammar and spelling of this text 
-            but neither you change the writing style 
-            nor you add additional information: """+txt
+    prompt= """You are my writing assistant, correct the grammar and spelling of this text but do not change the writing style and do not add additional information: """+txt
     from dotenv import dotenv_values
     config = dotenv_values(".env")
 
