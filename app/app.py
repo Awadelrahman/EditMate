@@ -15,7 +15,7 @@ with txt_col:
                     "Enter Your Text", height=300
                 )
 
-correct_me_button = st.button('Correct Me' )
+correct_me_button = st.button('Correct Text' )
 
 if correct_me_button and txt:
     response=utils.get_response(txt)
